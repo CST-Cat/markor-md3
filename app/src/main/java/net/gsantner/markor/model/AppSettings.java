@@ -740,6 +740,14 @@ public class AppSettings extends GsSharedPreferencesPropertyBackend {
         return getBool(R.string.pref_key__ui_flat_top_bottom_bars, false);
     }
 
+    public boolean isDynamicColorEnabled() {
+        return getBool(R.string.pref_key__dynamic_color, false);
+    }
+
+    public boolean isReduceMotionEnabled() {
+        return getBool(R.string.pref_key__reduce_motion, false);
+    }
+
     public boolean isMainBottomBarTabTitlesShown() {
         return getBool(R.string.pref_key__main_bottom_bar_show_tab_titles, true);
     }
@@ -756,7 +764,9 @@ public class AppSettings extends GsSharedPreferencesPropertyBackend {
     }
 
     public @ColorInt int getConfiguredBarBackgroundColor() {
-        return isFlatTopBottomBarColorEnabled() ? getUiBackgroundColor() : rcolor(R.color.primary);
+        // MD3: bars are tonal surfaces, not the saturated brand color.
+        // "Flat" bars keep the historic meaning: exactly the app background.
+        return isFlatTopBottomBarColorEnabled() ? getUiBackgroundColor() : rcolor(R.color.bar_background);
     }
 
     public void setEditorBasicColor(boolean forDarkMode, @ColorRes int fgColor, @ColorRes int bgColor) {

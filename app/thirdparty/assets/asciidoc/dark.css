@@ -6,14 +6,14 @@
 /* CUSTOMISATIONS */
 /* Change the values in root for quick customisation. If you want even more fine grain... venture further. */
 :root{
---maincolor:#282c34;
+--maincolor:#1B1B1F;
 --primarycolor:#f39c12;
 --secondarycolor:#03a9f4;
 --tertiarycolor:#4db6ac;
---sidebarbackground:#21252b;
---linkcolor:#f44336;
+--sidebarbackground:#45464F;
+--linkcolor:#AEC6FF;
 --linkcoloralternate:#ff9800;
---white:#FFFFFF;
+--white:#E4E1E6;
 }
 
 /* Text styles */
@@ -25,7 +25,7 @@ h2,h3,h4,h5,h6{color:var(--secondarycolor) !important;font-family:"Noto Sans",sa
 .title{color:var(--white) !important;font-family:"Noto Sans",sans-serif;font-style: normal; font-weight: normal;}
 p{font-family: "Noto Sans",sans-serif ! important}
 #toc.toc2 a:link{color:var(--linkcolor);}
-blockquote{color:var(--tertiarycolor) !important}
+blockquote{color:#C5C6D0 !important}
 .quoteblock{color:var(--white)}
 code{color:var(--linkcoloralternate);background-color: var(--sidebarbackground) !important}
 
@@ -44,7 +44,7 @@ td{background-color: var(--maincolor);color: var(--white) !important}
 }
 
 a {
-  color: var(--secondarycolor);
+  color: var(--linkcolor);
 }
 
 .admonitionblock td.icon .icon-tip::before {

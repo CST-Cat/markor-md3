@@ -12,7 +12,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
+import android.content.res.ColorStateList;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -31,7 +31,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -62,7 +61,10 @@ public class MainActivity extends MarkorBaseActivity implements GsFileBrowserFra
 
     public static boolean IS_DEBUG_ENABLED = false;
 
-    private BottomNavigationView _bottomNav;
+    // Typed as the shared NavigationBarView base so the w600dp layout can
+    // substitute a NavigationRailView for the bottom Navigation Bar (MD3
+    // adaptive navigation) without any logic change.
+    private NavigationBarView _bottomNav;
     private ViewPager2 _viewPager;
     private SectionsPagerAdapter _sectionsAdapter;
     private GsFileBrowserFragment _notebook;
@@ -341,8 +343,11 @@ public class MainActivity extends MarkorBaseActivity implements GsFileBrowserFra
         final boolean showTabTitles = _appSettings.isMainBottomBarTabTitlesShown();
         final int barColor = _appSettings.getConfiguredBarBackgroundColor();
 
+        // MD3 Navigation Bar: tonal container + pill-shaped active indicator
+        // in secondaryContainer (previously the whole item background was
+        // painted with the bar color, which predates the indicator concept).
         _bottomNav.setBackgroundColor(barColor);
-        _bottomNav.setItemBackground(new ColorDrawable(barColor));
+        _bottomNav.setItemActiveIndicatorColor(ColorStateList.valueOf(getResources().getColor(R.color.m3_secondary_container)));
         _bottomNav.setLabelVisibilityMode(showTabTitles
                 ? NavigationBarView.LABEL_VISIBILITY_LABELED
                 : NavigationBarView.LABEL_VISIBILITY_UNLABELED);

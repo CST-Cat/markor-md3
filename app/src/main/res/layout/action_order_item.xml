@@ -13,8 +13,8 @@
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:contentDescription="@string/name"
+        android:tint="?attr/colorOnSurfaceVariant"
         android:src="@drawable/ic_format_indent_increase_black_24dp"
-        app:tint="@color/primary_text"
         android:layout_alignParentLeft="true" />
 
     <TextView
@@ -27,7 +27,7 @@
         android:color="@color/primary_text"
         android:paddingStart="@dimen/appbar_padding_top"
         android:paddingEnd="@dimen/appbar_padding_top"
-        android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+        android:textAppearance="@style/TextAppearance.Material3.LabelLarge" />
 
     <ImageView
         android:id="@+id/is_view_mode_action"
@@ -40,8 +40,8 @@
         android:alpha="0.3"
         android:maxHeight="24dp"
         android:visibility="invisible"
-        android:src="@drawable/ic_visibility_black_24dp"
-        app:tint="@color/primary_text" />
+        android:tint="?attr/colorOnSurfaceVariant"
+        android:src="@drawable/ic_visibility_black_24dp" />
 
     <ImageView
         android:id="@+id/is_edit_mode_action"
@@ -54,8 +54,8 @@
         android:alpha="0.3"
         android:maxHeight="24dp"
         android:visibility="invisible"
-        android:src="@drawable/ic_edit_black_24dp"
-        app:tint="@color/primary_text" />
+        android:tint="?attr/colorOnSurfaceVariant"
+        android:src="@drawable/ic_edit_black_24dp" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/enabled_switch"
@@ -76,6 +76,6 @@
         android:alpha="0.3"
         android:contentDescription="@string/drag"
         android:maxHeight="24dp"
-        android:src="@drawable/ic_drag_handle_black_24dp"
-        app:tint="@color/primary_text" />
+        android:tint="?attr/colorOnSurfaceVariant"
+        android:src="@drawable/ic_drag_handle_black_24dp" />
 </RelativeLayout>

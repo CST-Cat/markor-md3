@@ -6,7 +6,7 @@
     margin-bottom: 1em;
     border: 1px solid;
     border-left-width: 4px;
-    box-shadow: 2px 2px 6px #cdcdcd;
+    box-shadow: 2px 2px 6px rgba(27,27,31,0.18);
 }
 
 .adm-heading {

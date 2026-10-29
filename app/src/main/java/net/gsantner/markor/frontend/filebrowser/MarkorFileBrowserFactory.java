@@ -58,14 +58,15 @@ public class MarkorFileBrowserFactory {
         opts.contentDescriptionSelected = R.string.selected;
         opts.contentDescriptionFile = R.string.file;
 
-        opts.accentColor = R.color.accent;
-        opts.primaryColor = R.color.primary;
-        opts.primaryTextColor = R.color.primary_text;
-        opts.secondaryTextColor = R.color.secondary_text;
+        // MD3 tonal roles (were: accent/primary/primary_text/file/folder legacy colors)
+        opts.accentColor = R.color.m3_primary;
+        opts.primaryColor = R.color.bar_background;
+        opts.primaryTextColor = R.color.m3_on_surface;
+        opts.secondaryTextColor = R.color.m3_on_surface_variant;
         opts.backgroundColor = R.color.background;
-        opts.titleTextColor = R.color.primary_text;
-        opts.fileColor = R.color.file;
-        opts.folderColor = R.color.folder;
+        opts.titleTextColor = R.color.m3_on_surface;
+        opts.fileColor = R.color.m3_on_surface_variant;
+        opts.folderColor = R.color.m3_primary;
         opts.fileImage = R.drawable.ic_file_white_24dp;
         opts.folderImage = R.drawable.ic_folder_white_24dp;
         opts.titleText = R.string.select;
@@ -86,7 +87,7 @@ public class MarkorFileBrowserFactory {
         opts.popularFiles = appSettings.getPopularFiles();
 
         opts.descriptionFormat = appSettings.getString(R.string.pref_key__file_description_format, "");
-        opts.primaryColor = appSettings.isFlatTopBottomBarColorEnabled() ? R.color.background : R.color.primary;
+        opts.primaryColor = appSettings.isFlatTopBottomBarColorEnabled() ? R.color.background : R.color.bar_background;
         opts.showDividers = appSettings.isFileBrowserDividerEnabled();
 
         final File downloads = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);

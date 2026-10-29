@@ -25,7 +25,7 @@
             android:ellipsize="end"
             android:lines="1"
             android:text="@string/format"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -60,7 +60,7 @@
             android:id="@+id/formatted_example"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -127,7 +127,7 @@
             android:ellipsize="end"
             android:lines="1"
             android:text="@string/date"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge" />
 
 
         <LinearLayout

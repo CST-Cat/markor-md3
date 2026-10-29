@@ -56,17 +56,22 @@ public abstract class TextConverterBase {
     protected static final String TOKEN_POST_LANG = "{{ post.lang }}";
     protected static final String TOKEN_FILEURI_VIEWED_FILE = "{{ app.fileuri_viewed_file }}";
 
+    // MD3 preview palette, aligned with the app Material3 theme tokens.
+    // All preview styles reference these custom properties instead of hardcoded colors.
+    protected static final String CSS_VARIABLES_LIGHT = ":root{--mk-background:#FEFBFF;--mk-on-surface:#1B1B1F;--mk-on-surface-variant:#45464F;--mk-link:#3F5AA6;--mk-link-visited:#45464F;--mk-primary-container:#D9E2FF;--mk-on-primary-container:#001944;--mk-surface-variant:#E3E2E9;--mk-outline-variant:#C5C6D0;}";
+    protected static final String CSS_VARIABLES_DARK = ":root{--mk-background:#1B1B1F;--mk-on-surface:#E4E1E6;--mk-on-surface-variant:#C5C6D0;--mk-link:#AEC6FF;--mk-link-visited:#C5C6D0;--mk-primary-container:#00419E;--mk-on-primary-container:#D9E2FF;--mk-surface-variant:#45464F;--mk-outline-variant:#45464F;}";
+
     protected static final String HTML_DOCTYPE = "<!DOCTYPE html>";
-    protected static final String HTML001_HEAD_WITH_BASESTYLE = "<html lang='" + TOKEN_POST_LANG + "'><head><meta charset='UTF-8'>" + CSS_S + "html,body{padding:4px 8px 4px 8px;font-family:'" + TOKEN_FONT + "';}h1,h2,h3,h4,h5,h6{font-family:'sans-serif-condensed';}a{color: " + TOKEN_LINK_COLOR + ";text-decoration:underline;}img{height:auto;max-width:100%;max-height: 90vh;margin:auto;}" + CSS_E;
-    protected static final String HTML002_HEAD_WITH_STYLE_LIGHT = CSS_S + "html,body{color:#303030;}blockquote{color:#73747d;}" + CSS_E;
-    protected static final String HTML002_HEAD_WITH_STYLE_DARK = CSS_S + "html,body{color:#ffffff;background-color:#303030;}a:visited{color:#dddddd;}blockquote{color:#cccccc;}" + CSS_E;
+    protected static final String HTML001_HEAD_WITH_BASESTYLE = "<html lang='" + TOKEN_POST_LANG + "'><head><meta charset='UTF-8'>" + CSS_S + "html,body{padding:4px 8px 4px 8px;font-family:'" + TOKEN_FONT + "';}h1,h2,h3,h4,h5,h6{font-family:'sans-serif-condensed';}a{color: " + TOKEN_LINK_COLOR + ";text-decoration:underline;}img{height:auto;max-width:100%;max-height: 90vh;margin:auto;}pre{background-color:var(--mk-surface-variant);border-radius:12px;padding:12px;overflow:auto;}:not(pre)>code{background-color:var(--mk-surface-variant);border-radius:6px;padding:1.25px 4px;}hr{border:none;border-top:1px solid var(--mk-outline-variant);}" + CSS_E;
+    protected static final String HTML002_HEAD_WITH_STYLE_LIGHT = CSS_S + CSS_VARIABLES_LIGHT + "html,body{color:#1B1B1F;}html,body{background-color:#FEFBFF;}blockquote{color:#45464F;background-color:var(--mk-surface-variant);border-radius:12px;padding:4px 12px;}" + CSS_E;
+    protected static final String HTML002_HEAD_WITH_STYLE_DARK = CSS_S + CSS_VARIABLES_DARK + "html,body{color:#E4E1E6;background-color:#1B1B1F;}a:visited{color:var(--mk-link-visited);}blockquote{color:#C5C6D0;background-color:var(--mk-surface-variant);border-radius:12px;padding:4px 12px;}" + CSS_E;
     protected static final String HTML003_RIGHT_TO_LEFT = CSS_S + "body{text-align:" + TOKEN_TEXT_DIRECTION + ";direction:rtl;}" + CSS_E;
     protected static final String HTML004_HEAD_META_VIEWPORT_MOBILE = "<style>video, img { max-width: 100%; } pre { max-width: 100%; overflow: auto; } </style>";//"<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>";
     protected static final String HTML100_PERCENT_IN_FILEPATH = "<base>" + JS_S + "var newbase = document.baseURI.split('%').join('%25'); document.querySelector('base').setAttribute('href', newbase);" + JS_E;
-    protected static final String CSS_TABLE_STYLE = CSS_S + "table, th, td {  border: 1px solid " + TOKEN_BW_INVERSE_OF_THEME + "; border-collapse: collapse; border-spacing: 0; padding: 6px; }" + CSS_E;
-    protected static final String CSS_BUTTON_STYLE_MATERIAL = CSS_S + "button:hover,button:active {filter: invert(1);} button { display: inline-block; box-sizing: border-box; border: none; border-radius: 4px; padding: 0 16px; min-width: 64px; height: 36px; font-family: 'Roboto'; font-size: 14px; font-weight: 500;  line-height: 36px; overflow: hidden; outline: none; vertical-align: middle; text-align: center; text-overflow: ellipsis; text-transform: uppercase; box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); margin: 4px 4px 8px 0px;}   " + CSS_E;
+    protected static final String CSS_TABLE_STYLE = CSS_S + "table, th, td {  border: 1px solid var(--mk-outline-variant); border-collapse: collapse; border-spacing: 0; padding: 6px; }" + CSS_E;
+    protected static final String CSS_BUTTON_STYLE_MATERIAL = CSS_S + "button:hover {filter: brightness(0.96);} button:active {filter: brightness(0.92);} button { display: inline-block; box-sizing: border-box; border: none; border-radius: 20px; padding: 0 16px; min-width: 64px; height: 40px; font-family: 'Roboto'; font-size: 14px; font-weight: 500;  line-height: 40px; overflow: hidden; outline: none; vertical-align: middle; text-align: center; text-overflow: ellipsis; box-shadow: none; margin: 4px 4px 8px 0px; background-color: var(--mk-primary-container); color: var(--mk-on-primary-container);}   " + CSS_E;
     protected static final String CSS_BUTTON_STYLE_EMOJIBTN = CSS_S + " .emojibtn,.fa {font-size:250%; background: transparent; padding: 0px; min-width:0px;}   " + CSS_E;
-    protected static final String CSS_CLASS_STICKY = CSS_S + " .sticky {position: sticky; display: inline-block; border: 0px solid " + TOKEN_BW_INVERSE_OF_THEME + ";} " + CSS_E;
+    protected static final String CSS_CLASS_STICKY = CSS_S + " .sticky {position: sticky; display: inline-block; border: 0px solid var(--mk-outline-variant);} " + CSS_E;
     protected static final String CSS_CLASS_FLOAT = CSS_S + " .floatl {float: left;} .clear {clear:both;} " + CSS_E;
 
     // onPageLoaded_markor_private() invokes the user injected function onPageLoaded()
@@ -144,7 +149,7 @@ public abstract class TextConverterBase {
         boolean darkTheme = GsContextUtils.instance.isDarkModeEnabled(context) && !isExportInLightMode;
         String html = HTML_DOCTYPE + HTML001_HEAD_WITH_BASESTYLE.replace(TOKEN_POST_LANG, Locale.getDefault().getLanguage()) + (darkTheme ? HTML002_HEAD_WITH_STYLE_DARK : HTML002_HEAD_WITH_STYLE_LIGHT);
         if (isExportInLightMode) {
-            html = html.replace("html,body{color:#303030;}", "html,body{color: black !important; background-color: white !important;}");
+            html = html.replace("html,body{color:#1B1B1F;}", "html,body{color: black !important; background-color: white !important;}");
         }
         html += HTML004_HEAD_META_VIEWPORT_MOBILE + CSS_TABLE_STYLE + CSS_CLASS_FLOAT + CSS_BUTTON_STYLE_MATERIAL + CSS_BUTTON_STYLE_EMOJIBTN + CSS_CLASS_STICKY;
         if (as.isRenderRtl()) {
@@ -181,10 +186,10 @@ public abstract class TextConverterBase {
         // Replace tokens
         html = html
                 .replace(TOKEN_BW_INVERSE_OF_THEME, darkTheme ? "white" : "black")
-                .replace(TOKEN_BW_INVERSE_OF_THEME_HEADER_UNDERLINE, darkTheme ? "#eaecef" : "#696969")
-                .replace(TOKEN_COLOR_GREY_OF_THEME, darkTheme ? "#393939" : GsTextUtils.colorToHexString(ContextCompat.getColor(context, R.color.lighter_grey)))
+                .replace(TOKEN_BW_INVERSE_OF_THEME_HEADER_UNDERLINE, darkTheme ? "#45464F" : "#C5C6D0")
+                .replace(TOKEN_COLOR_GREY_OF_THEME, darkTheme ? "#45464F" : GsTextUtils.colorToHexString(ContextCompat.getColor(context, R.color.lighter_grey)))
                 .replace(TOKEN_LINK_COLOR, as.getViewModeLinkColor())
-                .replace(TOKEN_ACCENT_COLOR, GsTextUtils.colorToHexString(ContextCompat.getColor(context, R.color.accent)))
+                .replace(TOKEN_ACCENT_COLOR, GsTextUtils.colorToHexString(ContextCompat.getColor(context, R.color.m3_primary)))
                 .replace(TOKEN_TEXT_DIRECTION, as.isRenderRtl() ? "right" : "left")
                 .replace(TOKEN_FONT, font)
                 .replace(TOKEN_TEXT_CONVERTER_CSS_CLASS, "format-" + getClass().getSimpleName().toLowerCase().replace("textconverter", "").replace("converter", "") + (file == null ? "" : " fileext-" + GsFileUtils.getFilenameExtension(file).replace(".", "")))

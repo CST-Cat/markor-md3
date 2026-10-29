@@ -6,6 +6,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
 import net.gsantner.markor.R;
 import net.gsantner.opoc.util.GsContextUtils;
 
@@ -30,7 +32,7 @@ public class StoragePermissionActivity extends MarkorBaseActivity {
     }
 
     private void askForPermissions() {
-        final AlertDialog d = new AlertDialog.Builder(this, R.style.Theme_AppCompat_DayNight_Dialog_Rounded)
+        final AlertDialog d = new MaterialAlertDialogBuilder(this, R.style.Theme_AppCompat_DayNight_Dialog_Rounded)
                 .setMessage(R.string.storage_permission_required)
                 .setNegativeButton(R.string.exit, (dialog, which) -> finish())
                 .setPositiveButton(android.R.string.yes, (dialog, which) -> {

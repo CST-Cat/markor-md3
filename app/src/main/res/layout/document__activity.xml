@@ -23,14 +23,14 @@
         android:layout_height="?attr/actionBarSize"
         android:theme="@style/AppTheme.Light.AppBarOverlay">
 
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/primary"
+            android:background="?attr/colorSurface"
             android:theme="@style/LightTextToolbarOverlay">
 
-        </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.MaterialToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 

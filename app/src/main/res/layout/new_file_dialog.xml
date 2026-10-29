@@ -35,7 +35,7 @@
             android:ellipsize="end"
             android:lines="1"
             android:text="@string/name"
-            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+            android:textAppearance="@style/TextAppearance.Material3.BodySmall" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,7 +53,7 @@
                 android:hint="@string/title"
                 android:importantForAutofill="no"
                 android:singleLine="true"
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
                 android:textSize="15sp"
                 tools:ignore="HardcodedText,TextFields" />
 
@@ -70,7 +70,7 @@
                 android:importantForAutofill="no"
                 android:inputType="text|textNoSuggestions"
                 android:lines="1"
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
                 android:textSize="15sp"
                 tools:ignore="HardcodedText"
                 tools:text=".md" />
@@ -84,7 +84,7 @@
             android:ellipsize="end"
             android:lines="1"
             android:text="@string/format"
-            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+            android:textAppearance="@style/TextAppearance.Material3.BodySmall" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -103,7 +103,7 @@
                 android:hint="{{title}}"
                 android:importantForAutofill="no"
                 android:singleLine="true"
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
                 android:textSize="15sp"
                 tools:ignore="HardcodedText,TextFields" />
 
@@ -132,7 +132,7 @@
             android:ellipsize="end"
             android:lines="1"
             android:text="@string/type"
-            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+            android:textAppearance="@style/TextAppearance.Material3.BodySmall" />
 
         <view
             android:id="@+id/new_file_dialog__type"
@@ -149,7 +149,7 @@
             android:ellipsize="end"
             android:lines="1"
             android:text="@string/template"
-            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+            android:textAppearance="@style/TextAppearance.Material3.BodySmall" />
 
         <view
             android:id="@+id/new_file_dialog__template"
@@ -173,14 +173,14 @@
             android:text="@string/utf8_with_bom" />
 
         <TextView
-            style="@style/TextAppearance.AppCompat.Caption"
+            style="@style/TextAppearance.Material3.BodySmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/folder_is_created_without_extension" />
 
         <TextView
-            style="@style/TextAppearance.AppCompat.Caption"
+            style="@style/TextAppearance.Material3.BodySmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/keep_existing_file" />

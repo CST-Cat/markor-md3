@@ -28,16 +28,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="?attr/colorSurface"
             android:theme="@style/LightTextToolbarOverlay"
-            app:subtitleTextColor="@color/dark__secondary_text"
+            app:subtitleTextColor="?attr/colorOnSurfaceVariant"
             app:title="@string/app_name">
 
-        </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.MaterialToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -59,6 +59,7 @@
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/create_new_file_or_folder"
         android:src="@drawable/ic_add_white_24dp"
+        app:tint="?attr/colorOnPrimaryContainer"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton" />
@@ -67,10 +68,6 @@
         android:id="@+id/bottom_navigation_bar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/primary"
-        app:itemBackground="@color/primary"
-        app:itemIconTint="@drawable/bottomnav_color_selector"
-        app:itemTextColor="@drawable/bottomnav_color_selector"
         app:itemIconSize="@dimen/main_bottom_bar_icon_size"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"

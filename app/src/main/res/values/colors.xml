@@ -28,14 +28,14 @@
     <color name="accent_light">#FF9800</color>
     <color name="default_link_color">#388E3C</color>
 
-    <color name="light__background">#EEEEEE</color>
+    <color name="light__background">#FAF8FF</color>
     <color name="light__primary_text">#DE000000</color>
     <color name="light__secondary_text">#99000000</color>
     <color name="light__file">#757575</color>
     <color name="light__folder">#757575</color>
     <color name="attachment_dialog_action_button_background">#CACACA</color>
 
-    <color name="dark__background">@color/dark_grey</color>
+    <color name="dark__background">#121318</color>
     <color name="dark__primary_text">#DDFFFFFF</color>
     <color name="dark__secondary_text">#9E9E9E</color>
     <color name="dark__file">#9E9E9E</color>
@@ -70,4 +70,49 @@
     <color name="link">#FF1EA3FD</color>;
     <color name="transparent">#00FFFFFF</color>
     <color name="light_border">@color/lighter_grey</color>
+
+    <!-- ================================================================
+         Material Design 3 color roles (light scheme).
+         Brand seed is Markor's navy primary (#1E2135 family); the red
+         accent lives on as the tertiary palette. Dark values for the
+         same m3_* names live in values-night/colors.xml.
+         ================================================================ -->
+    <color name="m3_primary">#41508A</color>
+    <color name="m3_on_primary">#FFFFFF</color>
+    <color name="m3_primary_container">#DCE1FF</color>
+    <color name="m3_on_primary_container">#0A1542</color>
+    <color name="m3_secondary">#595E72</color>
+    <color name="m3_on_secondary">#FFFFFF</color>
+    <color name="m3_secondary_container">#DEE1F9</color>
+    <color name="m3_on_secondary_container">#161B2C</color>
+    <color name="m3_tertiary">#9F4257</color>
+    <color name="m3_on_tertiary">#FFFFFF</color>
+    <color name="m3_tertiary_container">#FFD9DE</color>
+    <color name="m3_on_tertiary_container">#410010</color>
+    <color name="m3_error">#BA1A1A</color>
+    <color name="m3_on_error">#FFFFFF</color>
+    <color name="m3_error_container">#FFDAD6</color>
+    <color name="m3_on_error_container">#410002</color>
+    <color name="m3_background">#FAF8FF</color>
+    <color name="m3_on_background">#1B1B21</color>
+    <color name="m3_surface">#FAF8FF</color>
+    <color name="m3_on_surface">#1B1B21</color>
+    <color name="m3_surface_variant">#E3E1EC</color>
+    <color name="m3_on_surface_variant">#45464F</color>
+    <color name="m3_surface_container_lowest">#FFFFFF</color>
+    <color name="m3_surface_container_low">#F4F2FA</color>
+    <color name="m3_surface_container">#EEECF4</color>
+    <color name="m3_surface_container_high">#E8E6EE</color>
+    <color name="m3_surface_container_highest">#E3E1E9</color>
+    <color name="m3_outline">#767680</color>
+    <color name="m3_outline_variant">#C6C5D0</color>
+    <color name="m3_inverse_surface">#303036</color>
+    <color name="m3_inverse_on_surface">#F2EFF4</color>
+    <color name="m3_inverse_primary">#B7C4FF</color>
+    <color name="m3_scrim">#000000</color>
+
+    <!-- Default app-bar / navigation-bar tone (MD3 tonal separation).
+         The "flat bars" user preference still resolves to the plain
+         background color instead; see AppSettings. -->
+    <color name="bar_background">@color/m3_surface_container</color>
 </resources>

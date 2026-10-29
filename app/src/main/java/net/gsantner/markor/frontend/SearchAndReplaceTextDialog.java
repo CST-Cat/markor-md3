@@ -26,6 +26,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
 import net.gsantner.markor.R;
 import net.gsantner.markor.frontend.textview.TextViewUtils;
 import net.gsantner.opoc.format.GsTextUtils;
@@ -110,7 +112,7 @@ public class SearchAndReplaceTextDialog {
         }
 
         final Resources res = activity.getResources();
-        final AlertDialog.Builder builder = new AlertDialog.Builder(activity, R.style.Theme_AppCompat_DayNight_Dialog_Rounded);
+        final AlertDialog.Builder builder = new MaterialAlertDialogBuilder(activity, R.style.Theme_AppCompat_DayNight_Dialog_Rounded);
         final View viewRoot = activity.getLayoutInflater().inflate(R.layout.search_replace_dialog, null);
         final AtomicReference<Dialog> dialog = new AtomicReference<>();
 

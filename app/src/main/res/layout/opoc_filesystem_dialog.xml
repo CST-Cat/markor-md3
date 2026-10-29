@@ -18,15 +18,15 @@
     android:layout_marginTop="4dp"
     android:animateLayoutChanges="true">
 
-    <androidx.appcompat.widget.Toolbar
+    <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/ui__filesystem_dialog__title_bar"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+        android:background="?attr/colorSurface"
+        android:theme="@style/LightTextToolbarOverlay">
 
-    </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.MaterialToolbar>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/ui__filesystem_dialog__search_edit"
@@ -63,6 +63,7 @@
         android:layout_marginBottom="15dp"
         android:alpha="0.75"
         tools:ignore="ContentDescription"
+        app:tint="?attr/colorOnPrimaryContainer"
         app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -77,6 +78,7 @@
         android:layout_marginBottom="15dp"
         android:alpha="0.75"
         tools:ignore="ContentDescription"
+        app:tint="?attr/colorOnPrimaryContainer"
         app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -91,6 +93,7 @@
         android:layout_marginBottom="15dp"
         android:alpha="0.75"
         tools:ignore="ContentDescription"
+        app:tint="?attr/colorOnPrimaryContainer"
         app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"/>
 
     <LinearLayout
@@ -109,8 +112,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:gravity="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button"
-            android:textColor="@color/primary"
+            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+            android:textColor="?attr/colorPrimary"
             tools:text="" />
 
         <!-- Flexible spacer -->
@@ -126,8 +129,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:gravity="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button"
-            android:textColor="@color/primary"
+            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+            android:textColor="?attr/colorPrimary"
             tools:text="Cancel" />
 
         <!-- OK Button: Right aligned -->
@@ -137,8 +140,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:gravity="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button"
-            android:textColor="@color/primary"
+            android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+            android:textColor="?attr/colorPrimary"
             tools:text="OK" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

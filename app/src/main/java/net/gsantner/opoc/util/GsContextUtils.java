@@ -105,6 +105,8 @@ import androidx.annotation.RawRes;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.browser.customtabs.CustomTabsIntent;
@@ -2261,7 +2263,7 @@ public class GsContextUtils {
         imv.setImageResource(mountDescriptionGraphic);
         imv.setAdjustViewBounds(true);
 
-        AlertDialog.Builder dialog = new AlertDialog.Builder(context);
+        AlertDialog.Builder dialog = new MaterialAlertDialogBuilder(context);
         dialog.setView(imv);
         dialog.setTitle(title);
         dialog.setMessage(context.getString(description) + "\n\n");
@@ -2404,7 +2406,7 @@ public class GsContextUtils {
     }
 
     public void requestExternalStoragePermission(final Activity activity, final String description) {
-        final AlertDialog d = new AlertDialog.Builder(activity)
+        final AlertDialog d = new MaterialAlertDialogBuilder(activity)
                 .setMessage(description)
                 .setCancelable(false)
                 .setPositiveButton(android.R.string.yes, (dialog, which) -> requestExternalStoragePermission(activity))
@@ -2591,7 +2593,7 @@ public class GsContextUtils {
         textView.setText(isHtml ? new SpannableString(Html.fromHtml(text)) : text);
         textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 17);
 
-        AlertDialog.Builder dialog = new AlertDialog.Builder(context)
+        AlertDialog.Builder dialog = new MaterialAlertDialogBuilder(context)
                 .setPositiveButton(android.R.string.ok, null).setOnDismissListener(dismissedListener)
                 .setView(scroll);
         if (resTitleId != 0) {
@@ -2603,7 +2605,7 @@ public class GsContextUtils {
     public void showDialogWithRawFileInWebView(final Activity context, String fileInRaw, @StringRes int resTitleId) {
         final WebView wv = new WebView(context);
         wv.loadUrl("file:///android_res/raw/" + fileInRaw);
-        AlertDialog.Builder dialog = new AlertDialog.Builder(context)
+        AlertDialog.Builder dialog = new MaterialAlertDialogBuilder(context)
                 .setPositiveButton(android.R.string.ok, null)
                 .setTitle(resTitleId)
                 .setView(wv);

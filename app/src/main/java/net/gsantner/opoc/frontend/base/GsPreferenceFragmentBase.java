@@ -65,6 +65,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.annotation.XmlRes;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.preference.DialogPreference;
 import androidx.preference.Preference;
@@ -610,7 +611,9 @@ public abstract class GsPreferenceFragmentBase<AS extends GsSharedPreferencesPro
 
         public DividerDecoration(Context context, @Nullable @ColorInt Integer color, float heightDp, @Nullable GsCallback.b1<Integer> isCategoryAtFlatpos) {
             if (color == null) {
-                color = Color.parseColor("#b8b8b8");
+                // MD3 outlineVariant role (was a hard-coded #b8b8b8 grey that
+                // looked wrong in dark mode)
+                color = ContextCompat.getColor(context, net.gsantner.markor.R.color.m3_outline_variant);
             }
             _isCategoryAtFlatpositionCallback = isCategoryAtFlatpos;
             _paint = new Paint();

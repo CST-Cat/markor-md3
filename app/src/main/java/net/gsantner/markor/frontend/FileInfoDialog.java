@@ -22,6 +22,8 @@ import android.widget.Toast;
 import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -75,7 +77,7 @@ public class FileInfoDialog extends DialogFragment {
     private AlertDialog.Builder setUpDialog(final File file, LayoutInflater inflater) {
         View root;
         AlertDialog.Builder dialogBuilder;
-        dialogBuilder = new AlertDialog.Builder(inflater.getContext(), R.style.Theme_AppCompat_DayNight_Dialog_Rounded);
+        dialogBuilder = new MaterialAlertDialogBuilder(inflater.getContext(), R.style.Theme_AppCompat_DayNight_Dialog_Rounded);
         root = inflater.inflate(R.layout.file_info_dialog, null);
 
         dialogBuilder.setView(root);

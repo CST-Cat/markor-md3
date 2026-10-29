@@ -15,6 +15,8 @@ import android.widget.TextView;
 
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.core.content.ContextCompat;
 
@@ -39,7 +41,7 @@ public class FileSearchDialog {
             final FileSearchDialog.Options options,
             final GsCallback.a1<FileSearchEngine.SearchOptions> dialogCallback
     ) {
-        final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(activity, R.style.Theme_AppCompat_DayNight_Dialog_Rounded);
+        final AlertDialog.Builder dialogBuilder = new MaterialAlertDialogBuilder(activity, R.style.Theme_AppCompat_DayNight_Dialog_Rounded);
         final AppSettings appSettings = AppSettings.get(activity);
 
         final ScrollView scrollView = new ScrollView(activity);

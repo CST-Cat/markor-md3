@@ -50,6 +50,8 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.annotation.StyleRes;
 import androidx.appcompat.app.AlertDialog;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.TooltipCompat;
@@ -303,7 +305,7 @@ public class GsSearchOrCustomTextDialog {
     public static void showMultiChoiceDialogWithSearchFilterUI(final Activity activity, final DialogOptions dopt) {
         final int dialogStyle = dopt.dialogStyle != 0 ? dopt.dialogStyle : GsContextUtils.instance.getResId(activity,
                 GsContextUtils.ResType.STYLE, dopt.isDarkDialog ? "Theme_AppCompat_Dialog" : "Theme_AppCompat_Light_Dialog");
-        final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(activity, dialogStyle);
+        final AlertDialog.Builder dialogBuilder = new MaterialAlertDialogBuilder(activity, dialogStyle);
 
         final Adapter listAdapter = new Adapter(activity, dopt);
 

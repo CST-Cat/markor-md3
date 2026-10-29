@@ -32,7 +32,7 @@
                 android:contentDescription="@string/toggle_find_replace"
                 android:padding="8dp"
                 android:tooltipText="@string/toggle_find_replace"
-                app:srcCompat="@drawable/ic_baseline_find_replace_24" />
+                app:srcCompat="@drawable/ic_baseline_find_replace_24" app:tint="?attr/colorOnSurfaceVariant" />
 
             <ImageButton
                 android:id="@+id/historyImageButton"
@@ -42,7 +42,7 @@
                 android:contentDescription="@string/history"
                 android:padding="8dp"
                 android:tooltipText="@string/history"
-                app:srcCompat="@drawable/ic_history_black_24dp" />
+                app:srcCompat="@drawable/ic_history_black_24dp" app:tint="?attr/colorOnSurfaceVariant" />
 
             <TextView
                 android:id="@+id/resultTextView"
@@ -61,7 +61,7 @@
                 android:contentDescription="@string/previous_match"
                 android:padding="8dp"
                 android:tooltipText="@string/previous_match"
-                app:srcCompat="@drawable/ic_baseline_arrow_upward_24" />
+                app:srcCompat="@drawable/ic_baseline_arrow_upward_24" app:tint="?attr/colorOnSurfaceVariant" />
 
             <ImageButton
                 android:id="@+id/nextImageButton"
@@ -71,7 +71,7 @@
                 android:contentDescription="@string/next_match"
                 android:padding="8dp"
                 android:tooltipText="@string/next_match"
-                app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
+                app:srcCompat="@drawable/ic_baseline_arrow_downward_24" app:tint="?attr/colorOnSurfaceVariant" />
 
             <ImageButton
                 android:id="@+id/findInSelectionImageButton"
@@ -81,7 +81,7 @@
                 android:contentDescription="@string/find_in_selection"
                 android:padding="8dp"
                 android:tooltipText="@string/find_in_selection"
-                app:srcCompat="@drawable/ic_list_selection_24dp" />
+                app:srcCompat="@drawable/ic_list_selection_24dp" app:tint="?attr/colorOnSurfaceVariant" />
 
             <ImageButton
                 android:id="@+id/filterImageButton"
@@ -91,7 +91,7 @@
                 android:contentDescription="@string/line_based_search"
                 android:padding="8dp"
                 android:tooltipText="@string/line_based_search"
-                app:srcCompat="@drawable/baseline_filter_alt_24" />
+                app:srcCompat="@drawable/baseline_filter_alt_24" app:tint="?attr/colorOnSurfaceVariant" />
         </LinearLayout>
 
         <LinearLayout
@@ -142,7 +142,7 @@
                             android:contentDescription="@string/clear"
                             android:padding="8dp"
                             android:tooltipText="@string/clear"
-                            app:srcCompat="@drawable/ic_baseline_clear_24" />
+                            app:srcCompat="@drawable/ic_baseline_clear_24" app:tint="?attr/colorOnSurfaceVariant" />
                     </FrameLayout>
 
                     <LinearLayout
@@ -160,7 +160,7 @@
                             android:contentDescription="@string/new_line"
                             android:padding="8dp"
                             android:tooltipText="@string/new_line"
-                            app:srcCompat="@drawable/ic_baseline_keyboard_return_24" />
+                            app:srcCompat="@drawable/ic_baseline_keyboard_return_24" app:tint="?attr/colorOnSurfaceVariant" />
 
                         <ImageButton
                             android:id="@+id/matchCaseImageButton"
@@ -170,7 +170,7 @@
                             android:contentDescription="@string/match_case"
                             android:padding="8dp"
                             android:tooltipText="@string/match_case"
-                            app:srcCompat="@drawable/outline_match_case_24" />
+                            app:srcCompat="@drawable/outline_match_case_24" app:tint="?attr/colorOnSurfaceVariant" />
 
                         <ImageButton
                             android:id="@+id/matchWholeWordImageButton"
@@ -180,7 +180,7 @@
                             android:contentDescription="@string/match_whole_word"
                             android:padding="8dp"
                             android:tooltipText="@string/match_whole_word"
-                            app:srcCompat="@drawable/outline_match_word_24" />
+                            app:srcCompat="@drawable/outline_match_word_24" app:tint="?attr/colorOnSurfaceVariant" />
 
                         <ImageButton
                             android:id="@+id/useRegexImageButton"
@@ -190,7 +190,7 @@
                             android:contentDescription="@string/use_regular_expression"
                             android:padding="8dp"
                             android:tooltipText="@string/use_regular_expression"
-                            app:srcCompat="@drawable/ic_regex_24dp" />
+                            app:srcCompat="@drawable/ic_regex_24dp" app:tint="?attr/colorOnSurfaceVariant" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -233,7 +233,7 @@
                             android:contentDescription="@string/clear"
                             android:padding="8dp"
                             android:tooltipText="@string/clear"
-                            app:srcCompat="@drawable/ic_baseline_clear_24" />
+                            app:srcCompat="@drawable/ic_baseline_clear_24" app:tint="?attr/colorOnSurfaceVariant" />
                     </FrameLayout>
 
                     <LinearLayout
@@ -250,7 +250,7 @@
                             android:contentDescription="@string/preserve_case"
                             android:padding="8dp"
                             android:tooltipText="@string/preserve_case"
-                            app:srcCompat="@drawable/ic_preserve_case_24dp" />
+                            app:srcCompat="@drawable/ic_preserve_case_24dp" app:tint="?attr/colorOnSurfaceVariant" />
 
                         <ImageButton
                             android:id="@+id/replaceImageButton"
@@ -260,7 +260,7 @@
                             android:contentDescription="@string/replace_once"
                             android:padding="8dp"
                             android:tooltipText="@string/replace_once"
-                            app:srcCompat="@drawable/ic_replace_24dp" />
+                            app:srcCompat="@drawable/ic_replace_24dp" app:tint="?attr/colorOnSurfaceVariant" />
 
                         <ImageButton
                             android:id="@+id/replaceAllImageButton"
@@ -270,7 +270,7 @@
                             android:contentDescription="@string/replace_all"
                             android:padding="8dp"
                             android:tooltipText="@string/replace_all"
-                            app:srcCompat="@drawable/ic_replace_all_24dp" />
+                            app:srcCompat="@drawable/ic_replace_all_24dp" app:tint="?attr/colorOnSurfaceVariant" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

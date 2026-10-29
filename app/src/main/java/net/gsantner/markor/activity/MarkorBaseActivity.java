@@ -25,6 +25,14 @@ public abstract class MarkorBaseActivity extends GsActivityBase<AppSettings, Mar
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setEnterTransition(null);
             getWindow().setExitTransition(null);
+            if (_appSettings.isReduceMotionEnabled()) {
+                // E-ink / reduced motion: kill the shared-element transitions
+                // the theme declares as well, not just enter/exit.
+                getWindow().setSharedElementEnterTransition(null);
+                getWindow().setSharedElementExitTransition(null);
+                getWindow().setReturnTransition(null);
+                getWindow().setReenterTransition(null);
+            }
         }
         _cu.setAppLanguage(this, _appSettings.getLanguage());
         if (_appSettings.isHideSystemStatusbar()) {
@@ -44,7 +52,12 @@ public abstract class MarkorBaseActivity extends GsActivityBase<AppSettings, Mar
 
     @Override
     public Integer getNewNavigationBarColor() {
-        return Color.BLACK;
+        // MD3: the system navigation bar follows the tonal bar surface
+        // instead of being forced black; the pure-black theme keeps black.
+        if (_appSettings != null && _appSettings.getAppThemeName().contains("black")) {
+            return Color.BLACK;
+        }
+        return _appSettings != null ? _appSettings.getConfiguredBarBackgroundColor() : null;
     }
 
     @Override

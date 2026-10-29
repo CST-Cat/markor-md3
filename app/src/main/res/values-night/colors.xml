@@ -11,6 +11,41 @@
     <color name="attachment_dialog_action_button_background">#424242</color>
     <color name="light_border">@color/grey</color>
 
-    <!-- All values specified only in base colors.xml  -->
+    <!-- Material Design 3 color roles (dark scheme).
+         Same m3_* names as values/colors.xml, dark tonal values. -->
+    <color name="m3_primary">#B7C4FF</color>
+    <color name="m3_on_primary">#14245E</color>
+    <color name="m3_primary_container">#2A386F</color>
+    <color name="m3_on_primary_container">#DCE1FF</color>
+    <color name="m3_secondary">#C2C5DD</color>
+    <color name="m3_on_secondary">#2B3042</color>
+    <color name="m3_secondary_container">#42465A</color>
+    <color name="m3_on_secondary_container">#DEE1F9</color>
+    <color name="m3_tertiary">#FFB2BE</color>
+    <color name="m3_on_tertiary">#5F1224</color>
+    <color name="m3_tertiary_container">#7E2A3D</color>
+    <color name="m3_on_tertiary_container">#FFD9DE</color>
+    <color name="m3_error">#FFB4AB</color>
+    <color name="m3_on_error">#690005</color>
+    <color name="m3_error_container">#93000A</color>
+    <color name="m3_on_error_container">#FFDAD6</color>
+    <color name="m3_background">#121318</color>
+    <color name="m3_on_background">#E4E1E9</color>
+    <color name="m3_surface">#121318</color>
+    <color name="m3_on_surface">#E4E1E9</color>
+    <color name="m3_surface_variant">#45464F</color>
+    <color name="m3_on_surface_variant">#C6C5D0</color>
+    <color name="m3_surface_container_lowest">#0C0E13</color>
+    <color name="m3_surface_container_low">#1B1B21</color>
+    <color name="m3_surface_container">#1F1F25</color>
+    <color name="m3_surface_container_high">#292931</color>
+    <color name="m3_surface_container_highest">#34343C</color>
+    <color name="m3_outline">#90909A</color>
+    <color name="m3_outline_variant">#45464F</color>
+    <color name="m3_inverse_surface">#E4E1E9</color>
+    <color name="m3_inverse_on_surface">#303036</color>
+    <color name="m3_inverse_primary">#41508A</color>
+
+    <!-- All other values specified only in base colors.xml  -->
 
 </resources>

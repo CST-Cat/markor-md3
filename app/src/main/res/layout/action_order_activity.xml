@@ -14,29 +14,28 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.Unified">
 
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="?attr/colorSurface"
             android:theme="@style/LightTextToolbarOverlay"
             app:title="@string/action_order">
 
-        </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.MaterialToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <Switch
+    <com.google.android.material.materialswitch.MaterialSwitch
         android:id="@+id/showActionBarSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:color="@color/primary_text"
         android:paddingStart="12dp"
         android:paddingTop="@dimen/activity_horizontal_margin"
         android:paddingEnd="12dp"
         android:paddingBottom="@dimen/activity_horizontal_margin"
         android:text="@string/show_bottom_action_bar"
-        android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+        android:textAppearance="@style/TextAppearance.Material3.LabelLarge" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/action_order_activity_recycler"

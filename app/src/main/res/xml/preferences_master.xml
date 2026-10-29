@@ -136,6 +136,20 @@
 
             <CheckBoxPreference
                 android:defaultValue="false"
+                android:icon="@drawable/ic_palette_black_24dp"
+                android:key="@string/pref_key__dynamic_color"
+                android:summary="@string/dynamic_color_description"
+                android:title="@string/dynamic_color" />
+
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:icon="@drawable/ic_lightning_black_24dp"
+                android:key="@string/pref_key__reduce_motion"
+                android:summary="@string/reduce_motion_description"
+                android:title="@string/reduce_motion" />
+
+            <CheckBoxPreference
+                android:defaultValue="false"
                 android:icon="@drawable/ic_visibility_off_black_24dp"
                 android:key="@string/pref_key__theming_hide_system_statusbar"
                 android:summary="@string/hide_statusbar_at_this_view"

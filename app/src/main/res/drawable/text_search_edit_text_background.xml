@@ -7,9 +7,9 @@
     </item>
     <item
         android:gravity="bottom"
-        android:height="1dp">
+        android:height="2dp">
         <shape>
-            <solid android:color="@color/primary_text" />
+            <solid android:color="@color/m3_primary" />
         </shape>
     </item>
 </layer-list>

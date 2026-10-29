@@ -25,6 +25,8 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import androidx.core.os.ConfigurationCompat;
 
 import net.gsantner.markor.R;
@@ -82,7 +84,7 @@ public class DatetimeFormatDialog {
      */
     @SuppressLint({"ClickableViewAccessibility", "SetTextI18n, InflateParams"})
     public static void showDatetimeFormatDialog(final Activity activity, final HighlightingEditor hlEditor) {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(activity, R.style.Theme_AppCompat_DayNight_Dialog_Rounded);
+        final AlertDialog.Builder builder = new MaterialAlertDialogBuilder(activity, R.style.Theme_AppCompat_DayNight_Dialog_Rounded);
         final View viewRoot = activity.getLayoutInflater().inflate(R.layout.time_format_dialog, null);
 
         final GsContextUtils cu = new GsContextUtils();

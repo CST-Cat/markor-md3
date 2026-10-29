@@ -8,7 +8,11 @@
 package net.gsantner.markor;
 
 import android.app.Application;
+import android.os.Build;
 import android.webkit.WebView;
+
+import com.google.android.material.color.DynamicColors;
+import com.google.android.material.color.DynamicColorsOptions;
 
 import net.gsantner.markor.model.AppSettings;
 
@@ -39,6 +43,17 @@ public class ApplicationObject extends Application {
         super.onCreate();
         _app = this;
         _appSettings = new AppSettings(getApplicationContext());
+
+        // Material You dynamic color (Android 12+), opt-in via settings.
+        // The precondition is evaluated per activity, so toggling the
+        // setting takes effect on the next activity (re)creation; the
+        // brand m3_* palette remains the default for everyone else.
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            final DynamicColorsOptions options = new DynamicColorsOptions.Builder()
+                    .setPrecondition((activity, theme) -> _appSettings != null && _appSettings.isDynamicColorEnabled())
+                    .build();
+            DynamicColors.applyToActivitiesIfAvailable(this, options);
+        }
 
         // Per https://stackoverflow.com/a/54191884/4717438
         try {

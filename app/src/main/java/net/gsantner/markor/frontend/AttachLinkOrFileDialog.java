@@ -24,6 +24,8 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.widget.TextViewCompat;
@@ -95,7 +97,7 @@ public class AttachLinkOrFileDialog {
     ) {
         final int[] sel = TextViewUtils.getSelection(edit);
 
-        final AlertDialog.Builder builder = new AlertDialog.Builder(activity, R.style.Theme_AppCompat_DayNight_Dialog_Rounded);
+        final AlertDialog.Builder builder = new MaterialAlertDialogBuilder(activity, R.style.Theme_AppCompat_DayNight_Dialog_Rounded);
         final View view = activity.getLayoutInflater().inflate(R.layout.select_path_dialog, null);
         final EditText inputPathName = view.findViewById(R.id.ui__select_path_dialog__name);
         final EditText inputPathUrl = view.findViewById(R.id.ui__select_path_dialog__url);

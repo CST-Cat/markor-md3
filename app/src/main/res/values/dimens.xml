@@ -8,5 +8,16 @@
     <dimen name="main_bottom_bar_icon_size">24dp</dimen>
     <dimen name="main_bottom_bar_min_height_labeled">56dp</dimen>
     <dimen name="main_bottom_bar_min_height_unlabeled">42dp</dimen>
-    <dimen name="dialog_corner_radius">16dp</dimen>
+    <!-- MD3 dialogs use the extraLarge shape (28dp) -->
+    <dimen name="dialog_corner_radius">28dp</dimen>
+
+    <!-- MD3 spacing / shape tokens -->
+    <dimen name="m3_spacing_small">8dp</dimen>
+    <dimen name="m3_spacing_medium">16dp</dimen>
+    <dimen name="m3_spacing_large">24dp</dimen>
+    <dimen name="m3_corner_small">8dp</dimen>
+    <dimen name="m3_corner_medium">12dp</dimen>
+    <dimen name="m3_corner_large">16dp</dimen>
+    <dimen name="m3_corner_extra_large">28dp</dimen>
+    <dimen name="m3_touch_target_min">48dp</dimen>
 </resources>

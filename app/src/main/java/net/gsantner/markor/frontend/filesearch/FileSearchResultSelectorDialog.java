@@ -19,6 +19,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
 import net.gsantner.markor.R;
 import net.gsantner.markor.frontend.MarkorDialogFactory;
 import net.gsantner.markor.frontend.filesearch.FileSearchEngine.FitFile;
@@ -47,7 +49,7 @@ public class FileSearchResultSelectorDialog {
             final List<FileSearchEngine.FitFile> searchResults,
             final GsCallback.a3<File, Integer, Boolean> callback
     ) {
-        final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(activity, R.style.Theme_AppCompat_DayNight_Dialog_Rounded);
+        final AlertDialog.Builder dialogBuilder = new MaterialAlertDialogBuilder(activity, R.style.Theme_AppCompat_DayNight_Dialog_Rounded);
 
         final LinearLayout dialogLayout = new LinearLayout(activity);
         dialogLayout.setOrientation(LinearLayout.VERTICAL);

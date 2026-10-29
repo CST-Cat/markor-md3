@@ -33,6 +33,8 @@ import android.widget.Toast;
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import androidx.documentfile.provider.DocumentFile;
 import androidx.fragment.app.DialogFragment;
 
@@ -102,7 +104,7 @@ public class NewFileDialog extends DialogFragment {
     private AlertDialog makeDialog(final File basedir, final boolean allowCreateDir, LayoutInflater inflater) {
         final Activity activity = getActivity();
         final AppSettings appSettings = AppSettings.get(activity);
-        final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(inflater.getContext(), R.style.Theme_AppCompat_DayNight_Dialog_Rounded);
+        final AlertDialog.Builder dialogBuilder = new MaterialAlertDialogBuilder(inflater.getContext(), R.style.Theme_AppCompat_DayNight_Dialog_Rounded);
         final View root = inflater.inflate(R.layout.new_file_dialog, null);
 
         final EditText titleEdit = root.findViewById(R.id.new_file_dialog__name);
