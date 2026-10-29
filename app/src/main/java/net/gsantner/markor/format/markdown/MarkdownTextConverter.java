@@ -82,8 +82,8 @@ public class MarkdownTextConverter extends TextConverterBase {
     public static final String CSS_BODY = CSS_S + "body{margin:0;padding:0.5vh 3.5vw}" + CSS_E;
     public static final String CSS_HEADER_UNDERLINE = CSS_S + ".header_no_underline { text-decoration: none; color: " + TOKEN_BW_INVERSE_OF_THEME + "; } h1 < a.header_no_underline { border-bottom: 2px solid #eaecef; } " + CSS_E;
     public static final String CSS_H1_H2_UNDERLINE = CSS_S + "h1, h2 { border-bottom: 2px solid " + TOKEN_BW_INVERSE_OF_THEME_HEADER_UNDERLINE + "; } " + CSS_E;
-    public static final String CSS_BLOCKQUOTE_VERTICAL_LINE = CSS_S + "blockquote{padding:0px 14px;border-" + TOKEN_TEXT_DIRECTION + ":3.5px solid #dddddd;margin:4px 0}" + CSS_E;
-    public static final String CSS_INLINE_CODE = CSS_S + ":not(pre) > code { background-color: #D2D2D880; padding: 1.25px 2.8px; border-radius: 4px; overflow-wrap: break-word; }" + CSS_E;
+    public static final String CSS_BLOCKQUOTE_VERTICAL_LINE = CSS_S + "blockquote{padding:0px 14px;border-" + TOKEN_TEXT_DIRECTION + ":3.5px solid var(--mk-outline-variant);margin:4px 0}" + CSS_E;
+    public static final String CSS_INLINE_CODE = CSS_S + ":not(pre) > code { background-color: var(--mk-surface-variant); padding: 1.25px 2.8px; border-radius: 6px; overflow-wrap: break-word; }" + CSS_E;
     public static final String CSS_LIST_TASK_NO_BULLET = CSS_S + ".task-list-item { list-style-type:none; text-indent: -1.4em; } li.task-list-item > pre, li.task-list-item > ul > li { text-indent: 0pt; }" + CSS_E;
     public static final String CSS_GITLAB_VIDEO_CAPTION = CSS_S + ".video-container > p { margin: 0; }" + CSS_E;
     public static final String CSS_LINK_SOFT_WRAP = CSS_S + "p > a { word-break:break-all; }" + CSS_E;
@@ -115,7 +115,7 @@ public class MarkdownTextConverter extends TextConverterBase {
     public static final String HTML_TOKEN_ITEM_E = "</span>";
     public static final String HTML_TOKEN_DELIMITER = "<span class='{{ scope }}-delimiter-{{ attrName }} delimiter'></span>";
 
-    public static final String CSS_FRONTMATTER = CSS_S + "span.delimiter::before { content: ', '; } .front-matter-container { margin-bottom: 1.5em; border-bottom: 2px solid black; } .front-matter-item { text-align: right; margin-bottom: 0.25em; } .front-matter-container-title { font-weight: bold; font-size: 110%; } .front-matter-container-tags { white-space: pre; overflow: scroll; font-size: 80%; } div.front-matter-item > .post-item-tags { padding: 0.1em 0.4em; border-radius: 50rem; background-color: #dee2e6; } div.front-matter-item > span.post-item-tags:not(:first-child) { margin-left: 0.25em; } div.front-matter-item > span.post-delimiter-tags::before { content: ' '; }" + CSS_E;
+    public static final String CSS_FRONTMATTER = CSS_S + "span.delimiter::before { content: ', '; } .front-matter-container { margin-bottom: 1.5em; border-bottom: 2px solid var(--mk-outline-variant); } .front-matter-item { text-align: right; margin-bottom: 0.25em; } .front-matter-container-title { font-weight: bold; font-size: 110%; } .front-matter-container-tags { white-space: pre; overflow: scroll; font-size: 80%; } div.front-matter-item > .post-item-tags { padding: 0.1em 0.4em; border-radius: 50rem; background-color: var(--mk-primary-container); color: var(--mk-on-primary-container); } div.front-matter-item > span.post-item-tags:not(:first-child) { margin-left: 0.25em; } div.front-matter-item > span.post-delimiter-tags::before { content: ' '; }" + CSS_E;
     public static final String YAML_FRONTMATTER_SCOPES = "post"; //, page, site";
     public static final Pattern YAML_FRONTMATTER_TOKEN_PATTERN = Pattern.compile("\\{\\{\\s+(?:" + YAML_FRONTMATTER_SCOPES.replaceAll(",\\s*", "|") + ")\\.[A-Za-z0-9]+\\s+\\}\\}");
 
@@ -182,7 +182,7 @@ public class MarkdownTextConverter extends TextConverterBase {
         options.set(GitLabExtension.RENDER_BLOCK_MATH, false);
 
         // Checkboxes by default disabled/readonly, unusable thus for "holiday pack list" with temporary checking
-        final String checkedCheckbox = "<input type=checkbox class=task-list-item-checkbox checked=checked style='accent-color: #F04B4B;' />";
+        final String checkedCheckbox = "<input type=checkbox class=task-list-item-checkbox checked=checked style='accent-color: var(--mk-link);' />";
         options.set(TaskListExtension.ITEM_NOT_DONE_MARKER, checkedCheckbox.replace("checked=checked", ""))
                 .set(TaskListExtension.ITEM_DONE_MARKER, checkedCheckbox);
         if (!checkboxSourceIndices.isEmpty()) {
