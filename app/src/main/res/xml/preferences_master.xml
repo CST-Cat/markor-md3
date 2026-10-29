@@ -127,6 +127,16 @@
                 android:summary="%1$s"
                 android:title="@string/theme" />
 
+            <ListPreference
+                android:defaultValue="@string/color_scheme_default"
+                android:dialogTitle="@string/color_scheme"
+                android:entries="@array/pref_arrdisp__color_schemes"
+                android:entryValues="@array/pref_arrkeys__color_schemes"
+                android:icon="@drawable/ic_palette_black_24dp"
+                android:key="@string/pref_key__color_scheme"
+                android:summary="@string/color_scheme_description"
+                android:title="@string/color_scheme" />
+
             <CheckBoxPreference
                 android:defaultValue="false"
                 android:icon="@drawable/ic_border_outer_black_24dp"

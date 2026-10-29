@@ -133,4 +133,55 @@
         <item name="android:textColorSecondary">?attr/colorOnSurfaceVariant</item>
         <item name="colorAccent">@color/m3_primary</item>
     </style>
+
+    <!-- Claude color scheme overlay (optional, Settings > Appearance >
+         Color scheme). Applied at runtime on top of AppTheme.Unified by
+         MarkorBaseActivity when selected; remaps the MD3 color roles to
+         the claude_* palette from DESIGN.md. Anything not listed here
+         (shapes, typography, non-color attrs) stays stock MD3. -->
+    <style name="ThemeOverlay.Markor.Claude" parent="ThemeOverlay.Material3">
+        <item name="colorPrimary">@color/claude_primary</item>
+        <item name="colorOnPrimary">@color/claude_on_primary</item>
+        <item name="colorPrimaryContainer">@color/claude_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/claude_on_primary_container</item>
+        <item name="colorPrimaryInverse">@color/claude_inverse_primary</item>
+        <item name="colorSecondary">@color/claude_secondary</item>
+        <item name="colorOnSecondary">@color/claude_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/claude_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/claude_on_secondary_container</item>
+        <item name="colorTertiary">@color/claude_tertiary</item>
+        <item name="colorOnTertiary">@color/claude_on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/claude_tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/claude_on_tertiary_container</item>
+        <item name="colorError">@color/claude_error</item>
+        <item name="colorOnError">@color/claude_on_error</item>
+        <item name="colorErrorContainer">@color/claude_error_container</item>
+        <item name="colorOnErrorContainer">@color/claude_on_error_container</item>
+        <item name="colorOnBackground">@color/claude_on_background</item>
+        <item name="colorSurface">@color/claude_surface</item>
+        <item name="colorOnSurface">@color/claude_on_surface</item>
+        <item name="colorSurfaceVariant">@color/claude_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/claude_on_surface_variant</item>
+        <item name="colorSurfaceContainerLowest">@color/claude_surface_container_lowest</item>
+        <item name="colorSurfaceContainerLow">@color/claude_surface_container_low</item>
+        <item name="colorSurfaceContainer">@color/claude_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/claude_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/claude_surface_container_highest</item>
+        <item name="colorOutline">@color/claude_outline</item>
+        <item name="colorOutlineVariant">@color/claude_outline_variant</item>
+        <item name="colorSurfaceInverse">@color/claude_surface_inverse</item>
+        <item name="colorOnSurfaceInverse">@color/claude_on_surface_inverse</item>
+        <item name="colorAccent">@color/claude_primary</item>
+        <item name="colorControlActivated">@color/claude_primary</item>
+        <item name="dialogTheme">@style/Theme.Markor.Claude.Dialog.Rounded</item>
+        <item name="alertDialogTheme">@style/Theme.Markor.Claude.Dialog.Rounded</item>
+    </style>
+
+    <!-- Claude variant of the rounded dialog theme: same shape/metrics as
+         the stock dialog style, Claude surface instead of the MD3 one
+         (the stock style points at a fixed @color/m3_* background). -->
+    <style name="Theme.Markor.Claude.Dialog.Rounded" parent="Theme.AppCompat.DayNight.Dialog.Rounded">
+        <item name="android:colorBackground">@color/claude_surface_container_high</item>
+        <item name="android:colorBackgroundFloating" tools:targetApi="23">@color/claude_surface_container_high</item>
+    </style>
 </resources>

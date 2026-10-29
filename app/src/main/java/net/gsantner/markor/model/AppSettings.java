@@ -748,6 +748,14 @@ public class AppSettings extends GsSharedPreferencesPropertyBackend {
         return getBool(R.string.pref_key__reduce_motion, false);
     }
 
+    public String getColorScheme() {
+        return getString(R.string.pref_key__color_scheme, _context.getString(R.string.color_scheme_default));
+    }
+
+    public boolean isClaudeTheme() {
+        return _context.getString(R.string.color_scheme_claude).equals(getColorScheme());
+    }
+
     public boolean isMainBottomBarTabTitlesShown() {
         return getBool(R.string.pref_key__main_bottom_bar_show_tab_titles, true);
     }
@@ -766,7 +774,10 @@ public class AppSettings extends GsSharedPreferencesPropertyBackend {
     public @ColorInt int getConfiguredBarBackgroundColor() {
         // MD3: bars are tonal surfaces, not the saturated brand color.
         // "Flat" bars keep the historic meaning: exactly the app background.
-        return isFlatTopBottomBarColorEnabled() ? getUiBackgroundColor() : rcolor(R.color.bar_background);
+        if (isFlatTopBottomBarColorEnabled()) {
+            return getUiBackgroundColor();
+        }
+        return rcolor(isClaudeTheme() ? R.color.claude_surface_container : R.color.bar_background);
     }
 
     public void setEditorBasicColor(boolean forDarkMode, @ColorRes int fgColor, @ColorRes int bgColor) {

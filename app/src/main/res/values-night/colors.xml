@@ -46,6 +46,42 @@
     <color name="m3_inverse_on_surface">#303036</color>
     <color name="m3_inverse_primary">#41508A</color>
 
+    <!-- Claude scheme, dark values (same names as values/colors.xml;
+         DESIGN.md dark surface family + coral lightened for dark UI) -->
+    <color name="claude_primary">#E5A186</color>
+    <color name="claude_on_primary">#55200D</color>
+    <color name="claude_primary_container">#7A3E28</color>
+    <color name="claude_on_primary_container">#F6DCCF</color>
+    <color name="claude_primary_active">#CC785C</color>
+    <color name="claude_secondary">#A09D96</color>
+    <color name="claude_on_secondary">#1F1E1B</color>
+    <color name="claude_secondary_container">#33312C</color>
+    <color name="claude_on_secondary_container">#E8E0D2</color>
+    <color name="claude_tertiary">#7FCBBB</color>
+    <color name="claude_on_tertiary">#0E352C</color>
+    <color name="claude_tertiary_container">#245045</color>
+    <color name="claude_on_tertiary_container">#CDE9E2</color>
+    <color name="claude_error">#E08A8A</color>
+    <color name="claude_on_error">#5F1414</color>
+    <color name="claude_error_container">#7A2E2E</color>
+    <color name="claude_on_error_container">#F6DBDB</color>
+    <color name="claude_background">#181715</color>
+    <color name="claude_on_background">#FAF9F5</color>
+    <color name="claude_surface">#181715</color>
+    <color name="claude_on_surface">#FAF9F5</color>
+    <color name="claude_surface_variant">#252320</color>
+    <color name="claude_on_surface_variant">#A09D96</color>
+    <color name="claude_surface_container_lowest">#100F0E</color>
+    <color name="claude_surface_container_low">#1F1E1B</color>
+    <color name="claude_surface_container">#232120</color>
+    <color name="claude_surface_container_high">#252320</color>
+    <color name="claude_surface_container_highest">#2E2C29</color>
+    <color name="claude_outline">#6C6A64</color>
+    <color name="claude_outline_variant">#3A382F</color>
+    <color name="claude_surface_inverse">#FAF9F5</color>
+    <color name="claude_on_surface_inverse">#141413</color>
+    <color name="claude_inverse_primary">#CC785C</color>
+
     <!-- All other values specified only in base colors.xml  -->
 
 </resources>

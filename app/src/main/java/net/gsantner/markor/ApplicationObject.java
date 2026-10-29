@@ -48,9 +48,11 @@ public class ApplicationObject extends Application {
         // The precondition is evaluated per activity, so toggling the
         // setting takes effect on the next activity (re)creation; the
         // brand m3_* palette remains the default for everyone else.
+        // An explicitly chosen color scheme (e.g. Claude) wins over
+        // wallpaper colors, hence the extra precondition term.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             final DynamicColorsOptions options = new DynamicColorsOptions.Builder()
-                    .setPrecondition((activity, theme) -> _appSettings != null && _appSettings.isDynamicColorEnabled())
+                    .setPrecondition((activity, theme) -> _appSettings != null && _appSettings.isDynamicColorEnabled() && !_appSettings.isClaudeTheme())
                     .build();
             DynamicColors.applyToActivitiesIfAvailable(this, options);
         }

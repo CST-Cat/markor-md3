@@ -26,6 +26,16 @@
         <item translatable="false">dark-black</item>
     </string-array>
 
+    <string-array name="pref_arrdisp__color_schemes" translatable="false">
+        <item translatable="false">Material You (default)</item>
+        <item translatable="false">Claude</item>
+    </string-array>
+
+    <string-array name="pref_arrkeys__color_schemes" translatable="false">
+        <item translatable="false">default</item>
+        <item translatable="false">claude</item>
+    </string-array>
+
     <string-array name="pref_arrdisp__editor_basic_color_schemes" translatable="false">
         <item translatable="false">@string/editor_basic_color_scheme_markor</item>
         <item translatable="false">@string/editor_basic_color_scheme_black_or_white</item>

@@ -148,6 +148,9 @@ work. If not, see <https://creativecommons.org/publicdomain/zero/1.0/>.
     <string name="pref_key__app_theme" translatable="false">pref_key__app_theme</string>
     <string name="pref_key__dynamic_color" translatable="false">pref_key__dynamic_color</string>
     <string name="pref_key__reduce_motion" translatable="false">pref_key__reduce_motion</string>
+    <string name="pref_key__color_scheme" translatable="false">pref_key__color_scheme</string>
+    <string name="color_scheme_default" translatable="false">default</string>
+    <string name="color_scheme_claude" translatable="false">claude</string>
     <string name="pref_key__ui_flat_top_bottom_bars" translatable="false">pref_key__ui_flat_top_bottom_bars</string>
     <string name="pref_key__main_bottom_bar_show_tab_titles" translatable="false">pref_key__main_bottom_bar_show_tab_titles</string>
     <string name="pref_key__file_browser_show_dividers" translatable="false">pref_key__file_browser_show_dividers</string>

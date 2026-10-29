@@ -22,6 +22,12 @@ public abstract class MarkorBaseActivity extends GsActivityBase<AppSettings, Mar
         super.onCreate(savedInstanceState);
 
         _appSettings.applyAppTheme();
+        if (_appSettings.isClaudeTheme()) {
+            // Optional Claude color scheme: remap the MD3 color roles to
+            // the DESIGN.md palette. Must run before any content view is
+            // inflated (subclasses call setContentView after super).
+            getTheme().applyStyle(R.style.ThemeOverlay_Markor_Claude, true);
+        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setEnterTransition(null);
             getWindow().setExitTransition(null);
